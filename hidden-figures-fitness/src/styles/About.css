@@ -1,0 +1,106 @@
+/* General Styles */
+.about {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-header {
+    background: linear-gradient(to bottom right, #8e44ad, #3498db);
+    color: white;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-header p {
+    font-size: 1.5rem;
+  }
+  
+  /* Mission Section */
+  .about-mission {
+    padding: 40px 20px;
+  }
+  
+  .about-mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Team Section */
+  .about-team {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+  }
+  
+  .about-team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 50%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img {
+    width: 35px; /* Set width */
+/* Set height */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image fills its container */
+    margin-bottom: 10px; /* Adds spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+}
+
+
+    
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Values Section */
+  .about-values {
+    padding: 40px 20px;
+  }
+  
+  .about-values h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-values ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-values li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-values strong {
+    color: #3498db;
+  }
+  

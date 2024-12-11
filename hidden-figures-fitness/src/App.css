@@ -3,6 +3,15 @@ body {
   background-color: #f4f4f4;
 }
 
+img {
+  max-width: 100%; /* Set maximum width to 100% of the container */
+  height: auto; /* Adjust height proportionally */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 header {
   background-color: lightpink;
   color: white;

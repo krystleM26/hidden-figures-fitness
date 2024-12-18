@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import '../styles/Login.css'
 
 export default function Login() {
 
@@ -30,33 +31,35 @@ export default function Login() {
     }; 
        
     return (
-        <div>
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
+        <div className="login-container">
+            <div className="login-form">
+                <h2>Login</h2>
+                <form onSubmit={handleSubmit}>
+                    <div className="input-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="login-btn">Login</button>
+                </form>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
-            <div>
-                <label htmlFor="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        {errorMessage && <p>{errorMessage}</p>} {/* Display error message */}
-    </div>
+        </div>
   )
 
 }

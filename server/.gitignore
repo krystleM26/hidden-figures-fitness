@@ -1,6 +1,9 @@
-# dependencies
+# Node modules
 /node_modules
+
+# PnP files (used by Yarn)
 /.pnp
 .pnp.js
 
+# Environment file containing sensitive data
 .env

@@ -11,6 +11,7 @@ function Header() {
                     <li><Link to="/classes">Classes</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/booking">Book a session</Link></li>
+                    <li><Link to="/login"> Log In</Link></li>
                 </ul>
             </nav>
         </header>

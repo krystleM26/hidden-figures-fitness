@@ -8,7 +8,7 @@ import Classes from './pages/Classes'
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Login from './components/Login';
-import Logout from './components/Logout'
+
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/login" element={<Logout />} />
+        
       </Routes>
       <Footer />
     </Router>

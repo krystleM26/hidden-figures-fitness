@@ -6,6 +6,8 @@ export default function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,11 +31,23 @@ export default function Login() {
             setErrorMessage("An error has occured while communicating with the server")
         }
     }; 
+
+    const handleLogout = () => {
+        console.log("User logged out");
+        setIsLoggedIn(false); // Reset state to logged out
+        setEmail(""); // Optionally clear email
+        setPassword(""); // Optionally clear password
+      };
        
     return (
         <div className="login-container">
             <div className="login-form">
-                <h2>Login</h2>
+            <h2>{isLoggedIn ? "Welcome Back!" : "Login"}</h2>
+            {isLoggedIn ? (
+                <button onClick={handleLogout} className="logout-btn">
+                    Log Out
+                </button>
+             ) : (
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
@@ -56,7 +70,7 @@ export default function Login() {
                         />
                     </div>
                     <button type="submit" className="login-btn">Login</button>
-                </form>
+                </form>)}
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
         </div>

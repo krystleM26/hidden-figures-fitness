@@ -8,6 +8,7 @@ import Classes from './pages/Classes'
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Login from './components/Login';
+import Profile from './components/Profile';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/users" element={<Profile />} />
         
       </Routes>
       <Footer />

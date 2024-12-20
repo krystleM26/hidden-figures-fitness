@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 import '../styles/Login.css'
 
 export default function Login() {
@@ -15,18 +16,23 @@ export default function Login() {
             const response = await fetch("/login", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "appication/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({email, password})  //sends data to backend
             })
-            const data = await response.json();
 
-            if (response.ok) {
-                // Handle successful login (e.g., redirect or store a token)
-                console.log("Login successful:", data);
-            } else {
-                setErrorMessage(data.message || "An error occurred during login.");
+            const data = await response.json();
+            if(!response.ok) {
+                   setErrorMessage(data.message || "Invalid response format from server.");
+                    return;
             }
+            // Handle successful login (e.g., redirect or store a token)
+            console.log("Login successful:", data);
+            localStorage.setItem("token", data.token); // Example token handling
+            setIsLoggedIn(true);
+            setEmail("");
+            setPassword("");
+          
         } catch(err){
             setErrorMessage("An error has occured while communicating with the server")
         }
@@ -34,7 +40,7 @@ export default function Login() {
 
     const handleLogout = () => {
         console.log("User logged out");
-        setIsLoggedIn(false); // Reset state to logged out
+        setIsLoggedIn(true); // Reset state to logged out
         setEmail(""); // Optionally clear email
         setPassword(""); // Optionally clear password
       };
@@ -70,8 +76,15 @@ export default function Login() {
                         />
                     </div>
                     <button type="submit" className="login-btn">Login</button>
-                </form>)}
+                </form>
+            )}
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
+                {!isLoggedIn && (
+                    <p className="signup-message">
+                        Don't have an account? <Link to="/signup">Sign Up</Link>
+                    </p>
+                )}
+
             </div>
         </div>
   )

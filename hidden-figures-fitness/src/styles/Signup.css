@@ -1,0 +1,79 @@
+/* General Styles for Signup Page */
+.signup-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F2F2F2; /* Egg white background */
+    width: 100%;
+}
+
+.signup-form {
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #8E44AD; /* Pink color */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.signup-btn {
+    background-color: #8E44AD; /* Pink background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #9B59B6; /* Slightly lighter pink on hover */
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.login-message {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.login-message a {
+    color: #8E44AD; /* Pink color */
+    text-decoration: none;
+}
+
+.login-message a:hover {
+    text-decoration: underline;
+}

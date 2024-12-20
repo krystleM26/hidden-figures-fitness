@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import Booking from './pages/Booking';
 import Login from './components/Login';
 import Profile from './components/Profile';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/users" element={<Profile />} />
+        <Route path="/signup" element={<Signup />} />
         
       </Routes>
       <Footer />
